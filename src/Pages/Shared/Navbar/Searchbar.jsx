@@ -6,6 +6,7 @@ function Searchbar() {
   const searchRef = useRef();
 
   function handleSearch() {
+    if (!search) { return }
     alert(`Searching for ${search}`)
   }
 
@@ -32,11 +33,11 @@ function Searchbar() {
         ref={searchRef}
         onChange={(e) => setSearch(e.target.value)}
         onKeyDown={handleKeypress}
-        placeholder="Search products..."
-        className="bg-transparent w-full px-3 outline-none block py-2 my-2 rounded-sm" />
+        placeholder="Search products  (ctrl+k)"
+        className="bg-transparent w-full px-3 outline-none block py-2 my-2 focus:border-b focus:border-prim placeholder:text-mid" />
       <button
         onClick={handleSearch}
-        className="p-2"><FaSearch></FaSearch></button>
+        className="p-2 px-4 border-l border-low"><FaSearch></FaSearch></button>
     </div>
   )
 }

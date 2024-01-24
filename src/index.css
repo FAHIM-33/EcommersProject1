@@ -6,11 +6,11 @@
 
 @layer base {
   :root {
-    --prim: lime;
-    --high: white;
-    --mid: rgb(201, 201, 201);
-    --low: rgb(70, 70, 70);
-    --back: rgb(17, 17, 17);
+    --prim: rgb(24, 207, 0);
+    --high: rgb(0, 0, 0);
+    --mid: rgb(83, 83, 83);
+    --low: rgb(241, 245, 246);
+    --back: rgb(255, 255, 255);
     --fadeGrey: #4444444d;
 
     --background: 0 0% 100%;
@@ -44,35 +44,6 @@
     --radius: 0.5rem;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-  }
 }
 
 @layer base {
@@ -80,6 +51,11 @@
     font-family: "Bai Jamjuree", sans-serif;
     background-color: var(--back);
     color: var(--high);
+  }
+
+  img {
+    display: block;
+    width: 100%;
   }
 
   .cont {
