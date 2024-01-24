@@ -1,0 +1,4 @@
+.navLayer1 li:not(:last-child) {
+    border-right: 1px solid var(--low);
+    padding: 0 0.4rem;
+}
