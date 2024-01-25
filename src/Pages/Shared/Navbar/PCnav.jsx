@@ -2,9 +2,13 @@ import { IoPersonCircleOutline, IoCallOutline } from "react-icons/io5";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import Searchbar from './Searchbar'
 import { Separator } from "@/components/ui/separator"
+import Badge from "@/components/custom/Badge";
 
 
 const PCnav = () => {
+
+    let wishlist = 1
+
     return (
         <div className="py-1 hidden lg:block">
 
@@ -30,7 +34,6 @@ const PCnav = () => {
                     {/* <p className="text-4xl  font-semibold col-span-3">
                         BORO<span className="text-prim    ">LOX</span>
                     </p> */}
-
                     <p className="text-4xl  font-semibold col-span-3 bg-gradient-to-r from-high via-prim to-lime-400 bg-clip-text text-transparent">BOROLOX</p>
 
                     <div className="col-span-6 ">
@@ -42,10 +45,15 @@ const PCnav = () => {
                             <img src="https://i.ibb.co/TryRk55/boy1.png" alt="Profile pic" className="w-10" />
                             <p className="whitespace-pre-line leading-4">Some <br></br>Borolox</p>
                         </div>
-                        {/* <div className="h-full bg-low w-px"></div> */}
-                      <Separator orientation='vertical'></Separator>
-                        <div title="Wishlist">
+
+                        <Separator orientation='vertical'></Separator>
+
+                        <div title="Wishlist" className="relative p-2">
                             <FaRegHeart className="text-3xl"></FaRegHeart>
+                            {
+                                wishlist > 0 &&
+                                <Badge>{wishlist}</Badge>
+                            }
                         </div>
                         <div>
 
