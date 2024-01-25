@@ -1,5 +1,6 @@
 import { IoPersonCircleOutline, IoCallOutline } from "react-icons/io5";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { BsCart3 } from "react-icons/bs";
 import Searchbar from './Searchbar'
 import { Separator } from "@/components/ui/separator"
 import Badge from "@/components/custom/Badge";
@@ -8,6 +9,7 @@ import Badge from "@/components/custom/Badge";
 const PCnav = () => {
 
     let wishlist = 1
+    let cartitems = 1
 
     return (
         <div className="py-1 hidden lg:block">
@@ -48,15 +50,22 @@ const PCnav = () => {
 
                         <Separator orientation='vertical'></Separator>
 
-                        <div title="Wishlist" className="relative p-2">
+                        <div title="Wishlist" className="relative p-2 hover:text-prim duration-200">
                             <FaRegHeart className="text-3xl"></FaRegHeart>
                             {
                                 wishlist > 0 &&
                                 <Badge>{wishlist}</Badge>
                             }
                         </div>
-                        <div>
 
+                        <Separator orientation='vertical'></Separator>
+
+                        <div title="Cart" className="relative p-2 hover:text-prim duration-200">
+                            <BsCart3 className="text-3xl"></BsCart3>
+                            {
+                                cartitems > 0 &&
+                                <Badge>{cartitems}</Badge>
+                            }
                         </div>
                     </div>
 
