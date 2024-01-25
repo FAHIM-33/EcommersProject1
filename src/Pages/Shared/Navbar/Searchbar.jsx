@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
+
 function Searchbar() {
   const [search, setSearch] = useState('')
   const searchRef = useRef();
@@ -19,6 +20,7 @@ function Searchbar() {
   useEffect(() => {
     function shortFocus(e) {
       if (e.ctrlKey && e.key == 'k') {
+        e.preventDefault()
         searchRef.current.focus()
       }
     }
@@ -28,16 +30,17 @@ function Searchbar() {
 
   return (
     <div className='flex bg-low'>
-      <input
-        value={search}
-        ref={searchRef}
-        onChange={(e) => setSearch(e.target.value)}
-        onKeyDown={handleKeypress}
-        placeholder="Search products  (ctrl+k)"
-        className="bg-transparent w-full px-3 outline-none block py-2 my-2 focus:border-b focus:border-prim placeholder:text-mid" />
-      <button
-        onClick={handleSearch}
-        className="p-2 px-4 border-l border-low"><FaSearch></FaSearch></button>
+          <input
+            value={search}
+            ref={searchRef}
+            onChange={(e) => setSearch(e.target.value)}
+            onKeyDown={handleKeypress}
+            placeholder="Search products  (ctrl+k)"
+            className="bg-transparent w-full px-3 outline-none block py-2 my-2 focus:border-b focus:border-prim placeholder:text-mid" />
+
+        <button
+          onClick={handleSearch}
+          className="p-2 px-4 border-l border-low hover:text-prim duration-200 text-xl"><FaSearch></FaSearch></button>
     </div>
   )
 }

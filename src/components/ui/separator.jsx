@@ -4,16 +4,16 @@ import * as SeparatorPrimitive from "@radix-ui/react-separator"
 
 import { cn } from "@/lib/utils"
 
-const Separator = React.forwardRef((
+const Separator = React.forwardRef(( 
   { className, orientation = "horizontal", decorative = true, ...props },
   ref
 ) => (
   <SeparatorPrimitive.Root
     ref={ref}
-    decorative={decorative}
+    // decorative={decorative}
     orientation={orientation}
     className={cn(
-      "shrink-0 bg-prim",
+      "shrink-0 bg-high",
       orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
       className
     )}
