@@ -29,14 +29,14 @@ function Searchbar() {
   }, [])
 
   return (
-    <div className='flex bg-low'>
+    <div className='flex bg-low my-2 rounded-md'>
           <input
             value={search}
             ref={searchRef}
             onChange={(e) => setSearch(e.target.value)}
             onKeyDown={handleKeypress}
             placeholder="Search products  (ctrl+k)"
-            className="bg-transparent w-full px-3 outline-none block py-2 my-2 focus:border-b focus:border-prim placeholder:text-mid" />
+            className="bg-transparent w-full px-3 outline-none block py-1 my-2 focus:border-b focus:border-prim placeholder:text-mid" />
 
         <button
           onClick={handleSearch}

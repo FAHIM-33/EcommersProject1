@@ -4,6 +4,7 @@ import { BsCart3 } from "react-icons/bs";
 import Searchbar from './Searchbar'
 import { Separator } from "@/components/ui/separator"
 import Badge from "@/components/custom/Badge";
+import { Link } from "react-router-dom";
 
 
 const PCnav = () => {
@@ -36,7 +37,9 @@ const PCnav = () => {
                     {/* <p className="text-4xl  font-semibold col-span-3">
                         BORO<span className="text-prim    ">LOX</span>
                     </p> */}
-                    <p className="text-4xl  font-semibold col-span-3 bg-gradient-to-r from-high via-prim to-lime-400 bg-clip-text text-transparent">BOROLOX</p>
+                    <Link to='/' className="text-4xl w-fit font-semibold col-span-3  bg-gradient-to-r from-high to-prim py-1 pr-2 bg-clip-text text-transparent flex items-center justify-center">
+                    <img className="w-10 mr-2" src="/pngwing.com(1).png"/> <p>BOROLOX</p>
+                    </Link>
 
                     <div className="col-span-6 ">
                         <Searchbar></Searchbar>
