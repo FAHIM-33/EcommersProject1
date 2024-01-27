@@ -23,8 +23,8 @@ const PCnav = () => {
     let categories = [
         { id: 1, name: 'Laptop', brands: ['Dell', 'HP', 'Lenovo', 'Asus'] },
         { id: 2, name: 'Desktop', brands: ['HP', 'Acer', 'Custom Build'] },
-        { id: 3, name: 'Android', brands: ['Samsung', 'Google', 'OnePlus'] },
-        { id: 4, name: 'iPhone', brands: ['Apple'] },
+        { id: 3, name: 'Android', brands: ['Samsung', 'Xiaomi', 'OnePlus', "Pixel", 'Huawei', 'Realmi', 'Asus'] },
+        { id: 4, name: 'iPhone' },
         { id: 5, name: 'Headphone', brands: ['Sony', 'Bose', 'Sennheiser'] },
         { id: 6, name: 'Earbud', brands: ['Apple', 'Samsung', 'Jabra'] },
         { id: 7, name: 'Monitor', brands: ['LG', 'Samsung', 'Dell'] },
@@ -35,10 +35,10 @@ const PCnav = () => {
         { id: 12, name: 'Tablet', brands: ['Apple', 'Samsung', 'Amazon'] },
         { id: 13, name: 'TV', brands: ['Samsung', 'LG', 'Sony'] },
         { id: 14, name: 'Appliance', brands: ['Whirlpool', 'Samsung', 'LG'] }
-      ];
+    ];
 
     return (
-        <div className="py-1 hidden lg:block">
+        <div className="pt-1 hidden lg:block">
 
             {/* Layer 1 */}
             <div className="navLayer1 text-xs py-1 border-b-2 border-low">
@@ -102,27 +102,29 @@ const PCnav = () => {
             </div>
 
             {/* Layer 3 */}
-            <div className="cont flex gap-3 font-semibold">
-                {/* <p>Categories :</p> */}
-                {
-                    categories.map((obj, i) => <Link
-                        className="hover:text-prim"
-                        key={i}>
-                        <HoverCard openDelay={0} closeDelay={80}>
-                            <HoverCardTrigger>
-                                <div>{obj.name}</div>
-                            </HoverCardTrigger>
-                            <HoverCardContent className='px-0 border-t-2 border-prim border-x-0 border-b-0 rounded-t-none'>
-                                {obj.brands?.map((brandName, i) => <Link
-                                    key={i}
-                                    to={'/whereTOgo'}
-                                    className="block hover:bg-prim hover:text-white px-4"
-                                >{brandName}</Link>)}
-                            </HoverCardContent>
-                        </HoverCard>
+            <div className="py-2">
+                <div className="cont flex gap-4 font-semibold">
+                    <p>&gt;</p>
+                    {
+                        categories.map((obj, i) => <Link
+                            className="hover:text-prim"
+                            key={i}>
+                            <HoverCard openDelay={0} closeDelay={80}>
+                                <HoverCardTrigger>
+                                    <div>{obj.name}</div>
+                                </HoverCardTrigger>
+                                <HoverCardContent className='px-0 border-t-2 border-prim border-x-0 border-b-0 rounded-t-none'>
+                                    {obj.brands?.map((brandName, i) => <Link
+                                        key={i}
+                                        to={'/whereTOgo'}
+                                        className="block font-medium hover:bg-prim hover:text-white px-4"
+                                    >{brandName}</Link>)}
+                                </HoverCardContent>
+                            </HoverCard>
 
-                    </Link>)
-                }
+                        </Link>)
+                    }
+                </div>
             </div>
         </div >
     );

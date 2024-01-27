@@ -10,7 +10,7 @@
     --high: rgb(0, 0, 0);
     --mid: rgb(163, 163, 163);
     /* --low: rgb(241, 245, 246); */
-    --low: rgb(236, 240, 241);
+    --low: rgb(236, 241, 236);
     --back: rgb(255, 255, 255);
     --fadeGrey: #4444444d;
 
@@ -50,7 +50,8 @@
 @layer base {
   body {
     font-family: "Bai Jamjuree", sans-serif;
-    background-color: var(--back);
+    /* background-color: var(--back); */
+    background-color: var(--low);
     color: var(--high);
   }
 
