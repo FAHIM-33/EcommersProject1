@@ -6,11 +6,36 @@ import { Separator } from "@/components/ui/separator"
 import Badge from "@/components/custom/Badge";
 import { Link } from "react-router-dom";
 
+// for layer 3:
+import {
+    HoverCard,
+    HoverCardContent,
+    HoverCardTrigger,
+} from "@/components/ui/hover-card"
+
+
+
 
 const PCnav = () => {
 
     let wishlist = 1
     let cartitems = 1
+    let categories = [
+        { id: 1, name: 'Laptop', brands: ['Dell', 'HP', 'Lenovo', 'Asus'] },
+        { id: 2, name: 'Desktop', brands: ['HP', 'Acer', 'Custom Build'] },
+        { id: 3, name: 'Android', brands: ['Samsung', 'Google', 'OnePlus'] },
+        { id: 4, name: 'iPhone', brands: ['Apple'] },
+        { id: 5, name: 'Headphone', brands: ['Sony', 'Bose', 'Sennheiser'] },
+        { id: 6, name: 'Earbud', brands: ['Apple', 'Samsung', 'Jabra'] },
+        { id: 7, name: 'Monitor', brands: ['LG', 'Samsung', 'Dell'] },
+        { id: 8, name: 'Smart watch', brands: ['Apple', 'Samsung', 'Fitbit'] },
+        { id: 9, name: 'Camera', brands: ['Canon', 'Nikon', 'Sony'] },
+        { id: 10, name: 'Watch', brands: ['Rolex', 'Seiko', 'Casio'] },
+        { id: 11, name: 'Accessories', brands: ['Belkin', 'Logitech', 'Anker'] },
+        { id: 12, name: 'Tablet', brands: ['Apple', 'Samsung', 'Amazon'] },
+        { id: 13, name: 'TV', brands: ['Samsung', 'LG', 'Sony'] },
+        { id: 14, name: 'Appliance', brands: ['Whirlpool', 'Samsung', 'LG'] }
+      ];
 
     return (
         <div className="py-1 hidden lg:block">
@@ -37,8 +62,8 @@ const PCnav = () => {
                     {/* <p className="text-4xl  font-semibold col-span-3">
                         BORO<span className="text-prim    ">LOX</span>
                     </p> */}
-                    <Link to='/' className="text-4xl w-fit font-semibold col-span-3  bg-gradient-to-r from-high to-prim py-1 pr-2 bg-clip-text text-transparent flex items-center justify-center">
-                    <img className="w-10 mr-2" src="/pngwing.com(1).png"/> <p>BOROLOX</p>
+                    <Link to='/' className="text-4xl w-fit font-semibold col-span-3  py-1 pr-2 flex items-center justify-center">
+                        <img className="w-10 mr-2" src="/pngwing.com(1).png" /> <p className="bg-gradient-to-r from-high to-prim bg-clip-text text-transparent ">BOROLOX</p>
                     </Link>
 
                     <div className="col-span-6 ">
@@ -77,10 +102,29 @@ const PCnav = () => {
             </div>
 
             {/* Layer 3 */}
-            <div>
-                Layer 3
+            <div className="cont flex gap-3 font-semibold">
+                {/* <p>Categories :</p> */}
+                {
+                    categories.map((obj, i) => <Link
+                        className="hover:text-prim"
+                        key={i}>
+                        <HoverCard openDelay={0} closeDelay={80}>
+                            <HoverCardTrigger>
+                                <div>{obj.name}</div>
+                            </HoverCardTrigger>
+                            <HoverCardContent className='px-0 border-t-2 border-prim border-x-0 border-b-0 rounded-t-none'>
+                                {obj.brands?.map((brandName, i) => <Link
+                                    key={i}
+                                    to={'/whereTOgo'}
+                                    className="block hover:bg-prim hover:text-white px-4"
+                                >{brandName}</Link>)}
+                            </HoverCardContent>
+                        </HoverCard>
+
+                    </Link>)
+                }
             </div>
-        </div>
+        </div >
     );
 };
 
