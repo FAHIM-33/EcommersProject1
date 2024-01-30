@@ -103,7 +103,7 @@ const PCnav = () => {
 
             {/* Layer 3 */}
             <div className="py-2">
-                <div className="cont flex gap-4 font-semibold">
+                <div className="cont flex gap-4 font-semibold overflow-auto">
                     <Link to='/' className="hover:text-prim text-2xl"><FaHome></FaHome></Link>
                     <p>&gt;</p>
                     {
@@ -112,7 +112,7 @@ const PCnav = () => {
                             key={i}>
                             <HoverCard openDelay={0} closeDelay={80}>
                                 <HoverCardTrigger>
-                                    <div>{obj.name}</div>
+                                    <p className="whitespace-nowrap">{obj.name}</p>
                                 </HoverCardTrigger>
                                 <HoverCardContent className='px-0 border-t-2 border-prim border-x-0 border-b-0 rounded-t-none'>
                                     {obj.brands?.map((brandName, i) => <Link

@@ -54,7 +54,7 @@ function Searchbar() {
 
       <div
         ref={autofillRef}
-        className={`search-autofill ${isFocused ? 'block' : 'hidden'} absolute w-full h-20 top-14 bg-back shadow-md rounded-md`}>
+        className={`search-autofill ${isFocused ? 'block' : 'hidden'} absolute w-full h-20 z-10 top-14 bg-back shadow-md rounded-md`}>
         <p className="text-center">No results</p>
         <button onClick={() => alert("you clicked")}>press here</button>
       </div>
