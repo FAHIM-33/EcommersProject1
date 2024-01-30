@@ -8,7 +8,7 @@
   :root {
     --prim: rgb(24, 207, 0);
     --high: rgb(0, 0, 0);
-    --mid: rgb(163, 163, 163);
+    --mid: rgb(104, 104, 104);
     /* --low: rgb(241, 245, 246); */
     --low: rgb(236, 241, 236);
     --back: rgb(255, 255, 255);
@@ -64,6 +64,19 @@
     max-width: 1440px;
     margin: 0 auto;
   }
+
+  .btn {
+    border-radius: 5px;
+    color: var(--prim);
+    background-color: var(--prim);
+  }
+
+  .btn:hover {
+    cursor: pointer;
+    background-color: rgba(var(--prim), 0.5);
+
+  }
+
 }
 
 .brr {

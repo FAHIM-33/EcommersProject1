@@ -1,5 +1,5 @@
 import { IoPersonCircleOutline, IoCallOutline } from "react-icons/io5";
-import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { FaHeart, FaRegHeart, FaHome } from "react-icons/fa";
 import { BsCart3 } from "react-icons/bs";
 import Searchbar from './Searchbar'
 import { Separator } from "@/components/ui/separator"
@@ -104,6 +104,7 @@ const PCnav = () => {
             {/* Layer 3 */}
             <div className="py-2">
                 <div className="cont flex gap-4 font-semibold">
+                    <Link to='/' className="hover:text-prim text-2xl"><FaHome></FaHome></Link>
                     <p>&gt;</p>
                     {
                         categories.map((obj, i) => <Link
