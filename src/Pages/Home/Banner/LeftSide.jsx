@@ -23,9 +23,9 @@ const LeftSide = () => {
         <div className="flex flex-col gap-3">
             {featuredProducts.map((obj, idx) => <div
                 key={idx}
-                className="banner-card overflow-hidden shadow-md rounded-md relative bg-back p-2 "
+                className="banner-card overflow-hidden shadow-md rounded-md relative bg-back p-2 pl-4 "
             >
-                <img src={obj.image} alt={obj.name} className="w-40 h-40 object-contain ml-auto" />
+                <img src={obj.image} alt={obj.name} className="w-48 h-48 object-contain ml-auto" />
                 <div className="absolute top-1/2 space-y-2 -translate-y-1/2">
                     <p className="text-xl font-medium">{obj.name}</p>
                     <p className="text-mid text-sm">{obj.speciality}</p>
