@@ -46,7 +46,9 @@ const Mid = () => {
             </div>
 
             {/* Products slider */}
-            <div className='shadow-md brr flex-grow'></div>
+            <div className='shadow-md flex-grow'>
+            {/* To do... */}
+            </div>
         </div>
     );
 };

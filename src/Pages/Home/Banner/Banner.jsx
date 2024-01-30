@@ -11,7 +11,7 @@ const Banner = () => {
       <div className="col-span-6 row-span-12">
         <Mid></Mid>
       </div>
-      <div className="brr col-span-3 row-span-12">
+      <div className="col-span-3 row-span-12">
         <Compare></Compare>
       </div>
     </section>
