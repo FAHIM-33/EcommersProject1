@@ -1,3 +1,4 @@
+import Card from "@/components/custom/Card";
 import Heading from "@/components/custom/Heading";
 import { FaChevronRight } from "react-icons/fa";
 
@@ -10,7 +11,9 @@ const Featured = () => {
                 <button className="text-mid flex gap-2 items-center p-1">View all products <FaChevronRight className="mt-1"></FaChevronRight></button>
             </div>
 
-            
+            <div>
+                <Card></Card>
+            </div>
         </section>
     );
 };
