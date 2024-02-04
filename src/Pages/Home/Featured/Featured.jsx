@@ -15,7 +15,7 @@ const Featured = () => {
 
     return (
         <section >
-            <div className="flex justify-between bg-back my-4 py-4 px-3 shadow-md rounded-md">
+            <div className="flex justify-between bg-back mt-6 mb-2 py-4 px-3 shadow- rounded-md">
                 <Heading first='Featured' next='Products'></Heading>
                 <button className="text-mid flex gap-2 items-center p-1">View all products <FaChevronRight className="mt-1"></FaChevronRight></button>
             </div>
@@ -23,7 +23,7 @@ const Featured = () => {
             <div className="relative">
                 <Swiper
                     modules={[A11y]}
-                    spaceBetween={15}
+                    spaceBetween={9}
                     slidesPerView={5}
                     pagination={{ clickable: true }}
                     // onSlideChange={() => console.log('slide change')}

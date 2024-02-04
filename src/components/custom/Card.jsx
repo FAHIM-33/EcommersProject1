@@ -4,7 +4,7 @@ import { FaStar, FaRegStar, FaCartPlus } from "react-icons/fa";
 
 const Card = () => {
     return (
-        <div className="p-3 w-full relative bg-back rounded-md shadow-md ">
+        <div className="p-3 w-full relative bg-back rounded-md shadow- ">
             <img src="/src/assets/head2.jpg" alt="" className="w-full h-52 object-contain mx-auto" />
             <h3 className='font-medium '>Name of Product none none none none none none</h3>
             <div className='text-mid text-sm items-center flex gap-4 mt-1'>
