@@ -1,7 +1,7 @@
 
 const DummySection = () => {
     return (
-        <section className="mt-6 shadow-md grid lg:grid-cols-2 gap-4">
+        <section className="mt-6  grid lg:grid-cols-2 gap-4">
             <div className="relative group w-full bg-white p-4 rounded-md">
 
                 <div className=" absolute w-full h-full flex items-center  pl-10 top-2/4 left-0 -translate-y-2/4">
